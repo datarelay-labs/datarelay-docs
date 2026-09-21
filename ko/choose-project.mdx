@@ -9,22 +9,26 @@ description: "해결하려는 문제를 기준으로 적합한 DataRelay Labs �
 
 <CardGroup cols={2}>
   <Card title="NAT/방화벽 뒤 시스템에 원격 접속하고 싶습니다" icon="arrow-right-to-bracket" href="https://link.datarelay.run/">
-    **Data Relay Link — Secure Remote Access**는 일반적인 Inbound 연결을 받을 수 없는 시스템에서 필요한 SSH, HTTP, HTTPS 또는 Custom TCP 서비스만 선택적으로 공개합니다.
+    **DataRelay Link — Remote Access**는 전체 네트워크를 연결하지 않고 승인된 내부 Remote Service만 외부에 제공합니다.
   </Card>
 
   <Card title="제한망에서 승인된 Internet Destination만 접속하고 싶습니다" icon="arrow-up-right-from-square" href="https://link.datarelay.run/">
-    **Data Relay Link — Controlled Egress**는 Source, FQDN, Port, Fail-Closed 정책으로 제한망 Host가 승인된 HTTP/HTTPS Destination에만 접속하도록 합니다.
+    **DataRelay Link — Internet Access**는 Managed/Protected Source가 명시적으로 승인된 외부 Destination과 Service에만 접속하도록 합니다.
+  </Card>
+
+  <Card title="AI가 사설 Target에 제한된 권한으로 접근하게 하고 싶습니다" icon="robot" href="https://link.datarelay.run/">
+    **DataRelay Link — AI Access**는 검증된 AI Identity와 명시적인 Target/Permission을 사용합니다. MCP Bridge는 현재 v2.4 development target에 포함되며 stable release qualification 대상입니다.
   </Card>
 
   <Card title="Enterprise Data를 수집·처리·전달하고 싶습니다" icon="arrows-left-right" href="https://control.datarelay.run/">
-    **Data Relay Control**은 데이터를 한 번 수집하고 Route별 Transform, Protection, Policy를 적용한 뒤 하나 이상의 Destination으로 전달합니다.
+    **DataRelay Control**은 데이터를 한 번 수집하고 Route별 Transform, Protection, Policy를 적용한 뒤 하나 이상의 Destination으로 전달합니다.
   </Card>
 
   <Card title="어떤 제품을 써야 할지 잘 모르겠습니다" icon="circle-question" href="/ko/projects">
-    Data Relay Link와 Data Relay Control을 해결 문제, 데이터 경로, 운영 모델, 제품 경계 기준으로 비교합니다.
+    DataRelay Link와 DataRelay Control을 해결 문제, 데이터 경로, 운영 모델, 제품 경계 기준으로 비교합니다.
   </Card>
 </CardGroup>
 
 <Note>
-  Data Relay Link와 Data Relay Control은 독립 제품입니다. Control은 Link의 중앙 관리 제품이 아니며, Link도 Control 내부의 Network Transport 구성요소가 아닙니다.
+  DataRelay Link와 DataRelay Control은 독립 제품입니다. Control은 Link의 중앙 관리 제품이 아니며, Link도 Control 내부의 Network Transport 구성요소가 아닙니다.
 </Note>
