@@ -11,11 +11,12 @@ description: "See how DataRelay Labs projects relate and where each product boun
 flowchart TD
     P[datarelay.run\nDataRelay Labs Portal]
 
-    L[Data Relay Link\nSecure connectivity]
-    C[Data Relay Control\nEnterprise data control]
+    L[DataRelay Link\nSecure connectivity]
+    C[DataRelay Control\nEnterprise data control]
 
-    RA[Secure Remote Access\nOutside → selected private services]
-    EG[Controlled Egress\nRestricted hosts → approved Internet]
+    RA[Remote Access\nOutside → approved internal Remote Service]
+    IA[Internet Access\nManaged source → approved Internet destination]
+    AI[AI Access\nVerified AI Identity → approved permissions]
 
     ST[Streams\nCollect and track source progress]
     RT[Routes\nTransform / Protect / Policy]
@@ -24,32 +25,33 @@ flowchart TD
     P --> L
     P --> C
     L --> RA
-    L --> EG
+    L --> IA
+    L --> AI
     C --> ST --> RT --> DS
 ```
 
-This is a **project family, not one bundled runtime**. The portal helps users discover products; it does not imply a runtime dependency between them.
+This is a **product family, not one bundled runtime**. The portal helps users discover products; it does not imply a runtime dependency between them.
 
 ## Current project directory
 
 | Product | Primary purpose | Product site |
 | --- | --- | --- |
-| **Data Relay Link** | Secure Remote Access and Controlled Egress for private/restricted networks | [link.datarelay.run](https://link.datarelay.run/) |
-| **Data Relay Control** | Enterprise data collection, route processing, governance, protection, and multi-destination delivery | [control.datarelay.run](https://control.datarelay.run/) |
+| **DataRelay Link** | Secure connectivity for isolated/restricted networks through Remote Access, Internet Access, and AI Access | [link.datarelay.run](https://link.datarelay.run/) |
+| **DataRelay Control** | Enterprise data collection, route processing, governance, protection, and multi-destination delivery | [control.datarelay.run](https://control.datarelay.run/) |
 
 ## Product boundaries
 
 <AccordionGroup>
-  <Accordion title="Data Relay Link is not Data Relay Control">
-    Link relays network connections. It does not provide the Stream/Route/Destination data-processing model used by Control.
+  <Accordion title="DataRelay Link is not DataRelay Control">
+    Link controls what can connect. It does not provide the Stream/Route/Destination data-processing model used by Control.
   </Accordion>
 
-  <Accordion title="Data Relay Control is not a manager for Link">
+  <Accordion title="DataRelay Control is not a manager for Link">
     Control manages enterprise data flows. It is not currently a centralized registration, heartbeat, policy-delivery, or state-synchronization controller for Link.
   </Accordion>
 
-  <Accordion title="Future projects remain independent">
-    New DataRelay Labs projects can use their own runtime, repository, release lifecycle, and documentation site while still being discoverable from this portal.
+  <Accordion title="Future products remain independent">
+    New DataRelay Labs products can use their own runtime, repository, release lifecycle, and documentation site while still being discoverable from this portal.
   </Accordion>
 </AccordionGroup>
 
