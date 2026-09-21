@@ -11,11 +11,12 @@ description: "DataRelay Labs 프로젝트 관계와 각 제품의 경계를 확�
 flowchart TD
     P[datarelay.run\nDataRelay Labs Portal]
 
-    L[Data Relay Link\nSecure Connectivity]
-    C[Data Relay Control\nEnterprise Data Control]
+    L[DataRelay Link\nSecure Connectivity]
+    C[DataRelay Control\nEnterprise Data Control]
 
-    RA[Secure Remote Access\n외부 → 선택된 내부 서비스]
-    EG[Controlled Egress\n제한망 → 승인된 Internet]
+    RA[Remote Access\n외부 → 승인된 내부 Remote Service]
+    IA[Internet Access\nManaged Source → 승인된 Internet Destination]
+    AI[AI Access\n검증된 AI Identity → 승인된 Permission]
 
     ST[Streams\nSource 수집 및 Progress]
     RT[Routes\nTransform / Protect / Policy]
@@ -24,32 +25,33 @@ flowchart TD
     P --> L
     P --> C
     L --> RA
-    L --> EG
+    L --> IA
+    L --> AI
     C --> ST --> RT --> DS
 ```
 
-이 구조는 **하나의 통합 Runtime이 아니라 독립 프로젝트들의 Family**입니다. `datarelay.run`은 프로젝트를 찾기 위한 Portal이며 두 제품 간 Runtime 의존성을 의미하지 않습니다.
+이 구조는 **하나의 통합 Runtime이 아니라 독립 제품들의 Family**입니다. `datarelay.run`은 제품을 찾기 위한 Portal이며 두 제품 간 Runtime 의존성을 의미하지 않습니다.
 
 ## 현재 프로젝트 디렉터리
 
 | 제품 | 주요 목적 | 제품 페이지 |
 | --- | --- | --- |
-| **Data Relay Link** | 사설/제한망의 Secure Remote Access 및 Controlled Egress | [link.datarelay.run](https://link.datarelay.run/) |
-| **Data Relay Control** | Enterprise Data 수집, Route Processing, Governance, Protection, Multi-Destination Delivery | [control.datarelay.run](https://control.datarelay.run/) |
+| **DataRelay Link** | 폐쇄망/제한망을 위한 Remote Access, Internet Access, AI Access 기반 Secure Connectivity | [link.datarelay.run](https://link.datarelay.run/) |
+| **DataRelay Control** | Enterprise Data 수집, Route Processing, Governance, Protection, Multi-Destination Delivery | [control.datarelay.run](https://control.datarelay.run/) |
 
 ## 제품 경계
 
 <AccordionGroup>
-  <Accordion title="Data Relay Link는 Data Relay Control이 아닙니다">
-    Link는 Network Connection을 Relay합니다. Control의 Stream/Route/Destination Data Processing 모델을 제공하는 제품이 아닙니다.
+  <Accordion title="DataRelay Link는 DataRelay Control이 아닙니다">
+    Link는 무엇이 연결될 수 있는지를 제어합니다. Control의 Stream/Route/Destination Data Processing 모델을 제공하는 제품이 아닙니다.
   </Accordion>
 
-  <Accordion title="Data Relay Control은 Link의 중앙 관리 제품이 아닙니다">
+  <Accordion title="DataRelay Control은 Link의 중앙 관리 제품이 아닙니다">
     Control은 Enterprise Data Flow를 관리합니다. 현재 Link의 Registration, Heartbeat, Policy Delivery, State Synchronization을 담당하는 중앙 Controller가 아닙니다.
   </Accordion>
 
-  <Accordion title="새 프로젝트도 독립적으로 추가합니다">
-    앞으로 DataRelay Labs에 새 프로젝트가 생겨도 각 프로젝트는 자신의 Runtime, Repository, Release Lifecycle, 전용 문서를 유지하면서 이 포털에서 함께 소개할 수 있습니다.
+  <Accordion title="새 제품도 독립적으로 추가합니다">
+    앞으로 DataRelay Labs에 새 제품이 생겨도 각 제품은 자신의 Runtime, Repository, Release Lifecycle, 전용 문서를 유지하면서 이 포털에서 함께 소개할 수 있습니다.
   </Accordion>
 </AccordionGroup>
 
