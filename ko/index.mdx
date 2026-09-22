@@ -28,6 +28,9 @@ DataRelay Labs는 실제 현장의 연결, 데이터 전달, 실행 통제 문�
   <Card title="설계 철학" icon="book-open" href="/ko/principles">
     DataRelay Labs 제품들이 공유하는 설계 원칙과 확장 방식을 확인합니다.
   </Card>
+  <Card title="Engineering System" icon="code-branch" href="https://engineering.datarelay.run/ko">
+    DataRelay Labs Repository 전반에서 설계, 구현, 검증, Release, 운영, 작업 연속성을 관리하는 공통 Engineering Lifecycle을 확인합니다.
+  </Card>
 </CardGroup>
 
 ## 현재 제품
@@ -39,11 +42,26 @@ DataRelay Labs는 실제 현장의 연결, 데이터 전달, 실행 통제 문�
   <Card title="DataRelay Control" icon="sliders" href="https://control.datarelay.run/">
     **One Stream → Many Routes → Many Destinations** 모델을 사용하는 Enterprise Data Control Gateway입니다. 수집, Route별 처리, 보호, Governance, 다중 Destination 전달을 담당합니다.
   </Card>
-  <Card title="DataRelay Grant" icon="shield-check" href="https://github.com/datarelay-labs/datarelay-grant-docs">
+  <Card title="DataRelay Grant" icon="shield-check" href="https://grant.datarelay.run/">
     **US 12,056,667 B1** 및 **KR 10-2567118 B1** 특허를 기반으로 준비 중인 승인 및 실행 제어 계층입니다. 요청된 작업과 실제 실행 사이에 명시적인 사람의 승인을 두는 것을 목표로 합니다.
   </Card>
 </CardGroup>
 
 ## 계속 확장되는 제품 포털
 
-`datarelay.run`은 DataRelay Labs의 조직 포털입니다. 개별 제품은 `link.datarelay.run`, `control.datarelay.run`처럼 자신의 전용 사이트를 유지하며, DataRelay Grant는 현재 공개 문서 Repository를 통해 제품 정의를 제공하고 있습니다. 앞으로 새로운 제품이 추가되어도 기존 제품의 하위 기능처럼 묶지 않고 독립 제품으로 확장할 수 있습니다.
+`datarelay.run`은 DataRelay Labs의 조직 포털입니다. 개별 제품은 `link.datarelay.run`, `control.datarelay.run`, `grant.datarelay.run`처럼 자신의 전용 사이트를 유지합니다. 앞으로 새로운 제품이 추가되어도 기존 제품의 하위 기능처럼 묶지 않고 독립 제품으로 확장할 수 있습니다.
+
+## 공통 Engineering Foundation
+
+제품 Runtime은 서로 독립적이지만 개발 Lifecycle은 공통 Engineering Foundation을 따릅니다.
+
+<CardGroup cols={2}>
+  <Card title="Engineering System Handbook" icon="code-branch" href="https://engineering.datarelay.run/ko">
+    설계와 계획, bounded implementation, deterministic validation, PR/CI 검증, Release Evidence, 운영, Session Continuity까지 DataRelay Labs의 실제 Engineering Workflow를 설명합니다.
+  </Card>
+  <Card title="Canonical Engineering Standard" icon="github" href="https://github.com/datarelay-labs/engineering-system">
+    AI Agent와 각 Repository가 실제로 따르는 표준, Repository Rule, Template, Adapter, Validation Contract, Lifecycle Governance를 관리합니다.
+  </Card>
+</CardGroup>
+
+`engineering.datarelay.run`은 사람을 위한 Handbook이고, canonical `datarelay-labs/engineering-system` Repository가 normative engineering standard입니다.
