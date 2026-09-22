@@ -5,7 +5,7 @@ description: "해결하려는 문제를 기준으로 적합한 DataRelay Labs �
 
 # 문제별 제품 찾기
 
-현재 환경에서 해결하려는 문제와 가장 가까운 항목을 선택하세요. 각 카드는 해당 제품의 전용 문서 사이트로 연결됩니다.
+현재 환경에서 해결하려는 문제와 가장 가까운 항목을 선택하세요. 각 카드는 해당 제품의 전용 문서 또는 현재 공개 제품 정의로 연결됩니다.
 
 <CardGroup cols={2}>
   <Card title="NAT/방화벽 뒤 시스템에 원격 접속하고 싶습니다" icon="arrow-right-to-bracket" href="https://link.datarelay.run/">
@@ -24,11 +24,15 @@ description: "해결하려는 문제를 기준으로 적합한 DataRelay Labs �
     **DataRelay Control**은 데이터를 한 번 수집하고 Route별 Transform, Protection, Policy를 적용한 뒤 하나 이상의 Destination으로 전달합니다.
   </Card>
 
+  <Card title="자동 작업 실행 전에 사람의 승인을 받고 싶습니다" icon="shield-check" href="https://github.com/datarelay-labs/datarelay-grant-docs">
+    **DataRelay Grant**는 요청 → 사람의 승인 → 통제된 실행 흐름을 위한 Coming Soon 승인 및 실행 제어 계층입니다.
+  </Card>
+
   <Card title="어떤 제품을 써야 할지 잘 모르겠습니다" icon="circle-question" href="/ko/projects">
-    DataRelay Link와 DataRelay Control을 해결 문제, 데이터 경로, 운영 모델, 제품 경계 기준으로 비교합니다.
+    DataRelay Link, DataRelay Control, DataRelay Grant를 해결 문제, 운영 모델, 제품 경계 기준으로 비교합니다.
   </Card>
 </CardGroup>
 
 <Note>
-  DataRelay Link와 DataRelay Control은 독립 제품입니다. Control은 Link의 중앙 관리 제품이 아니며, Link도 Control 내부의 Network Transport 구성요소가 아닙니다.
+  DataRelay Link, DataRelay Control, DataRelay Grant는 독립 제품입니다. Grant는 Link, Control 또는 외부 시스템과 선택적으로 연동되는 승인 계층을 목표로 하며, 어느 제품의 필수 Runtime 구성요소도 아닙니다.
 </Note>
