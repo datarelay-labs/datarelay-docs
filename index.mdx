@@ -28,6 +28,9 @@ DataRelay Labs is the common home for independent products that solve practical 
   <Card title="Design philosophy" icon="book-open" href="/principles">
     Review the shared principles behind DataRelay Labs projects and how future projects fit into the organization.
   </Card>
+  <Card title="Engineering System" icon="code-branch" href="https://engineering.datarelay.run/">
+    See the shared engineering lifecycle used to design, implement, validate, release, operate, and continue work across DataRelay Labs repositories.
+  </Card>
 </CardGroup>
 
 ## Current products
@@ -39,11 +42,26 @@ DataRelay Labs is the common home for independent products that solve practical 
   <Card title="DataRelay Control" icon="sliders" href="https://control.datarelay.run/">
     Enterprise Data Control Gateway using a **One Stream → Many Routes → Many Destinations** model for collection, route-specific processing, governance, protection, and delivery.
   </Card>
-  <Card title="DataRelay Grant" icon="shield-check" href="https://github.com/datarelay-labs/datarelay-grant-docs">
+  <Card title="DataRelay Grant" icon="shield-check" href="https://grant.datarelay.run/">
     Coming-soon approval and execution-control layer based on **US 12,056,667 B1** and **KR 10-2567118 B1**. It is designed to place an explicit human decision between a requested action and its execution.
   </Card>
 </CardGroup>
 
 ## Built to grow as a product family
 
-`datarelay.run` is the DataRelay Labs organization portal. Individual products live on their own product sites or repositories, such as `link.datarelay.run`, `control.datarelay.run`, and the current DataRelay Grant documentation repository. Future DataRelay Labs products can be added here without turning the existing products into components of one bundled platform.
+`datarelay.run` is the DataRelay Labs organization portal. Individual products live on their own product sites, such as `link.datarelay.run`, `control.datarelay.run`, and `grant.datarelay.run`. Future DataRelay Labs products can be added here without turning the existing products into components of one bundled platform.
+
+## Shared engineering foundation
+
+The product runtimes are independent, but their engineering lifecycle follows a common foundation.
+
+<CardGroup cols={2}>
+  <Card title="Engineering System Handbook" icon="code-branch" href="https://engineering.datarelay.run/">
+    Human-readable guidance for the DataRelay Labs workflow: design and planning, bounded implementation, deterministic validation, PR/CI verification, release evidence, operations, and session continuity.
+  </Card>
+  <Card title="Canonical Engineering Standard" icon="github" href="https://github.com/datarelay-labs/engineering-system">
+    Machine-consumed standards, repository rules, templates, adapters, validation contracts, and lifecycle governance used by AI agents and project repositories.
+  </Card>
+</CardGroup>
+
+The handbook explains the workflow for humans; the canonical `datarelay-labs/engineering-system` repository remains the normative engineering standard.
