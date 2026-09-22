@@ -13,6 +13,7 @@ flowchart TD
 
     L[DataRelay Link\nSecure connectivity]
     C[DataRelay Control\nEnterprise data control]
+    G[DataRelay Grant\nHuman approval layer]
 
     RA[Remote Access\nOutside → approved internal Remote Service]
     IA[Internet Access\nManaged source → approved Internet destination]
@@ -22,22 +23,36 @@ flowchart TD
     RT[Routes\nTransform / Protect / Policy]
     DS[Destinations\nDeliver where needed]
 
+    REQ[Requested action]
+    DEC[Explicit human decision]
+    EXE[Controlled execution]
+
     P --> L
     P --> C
+    P --> G
+
     L --> RA
     L --> IA
     L --> AI
     C --> ST --> RT --> DS
+    G --> REQ --> DEC --> EXE
+
+    G -. optional approval gate .-> L
+    G -. optional approval gate .-> C
+    G -. API integration .-> EXT[External systems]
 ```
 
-This is a **product family, not one bundled runtime**. The portal helps users discover products; it does not imply a runtime dependency between them.
+This is a **product family, not one bundled runtime**. The portal helps users discover products; it does not imply a mandatory runtime dependency between them.
+
+DataRelay Grant is different from Link and Control in one important way: it is planned as an **optional shared approval layer**. A Link, Control, or external-system action may call Grant when a human decision is required before execution, while each product still keeps its own runtime and responsibility.
 
 ## Current project directory
 
-| Product | Primary purpose | Product site |
+| Product | Primary purpose | Product site / repository |
 | --- | --- | --- |
 | **DataRelay Link** | Secure connectivity for isolated/restricted networks through Remote Access, Internet Access, and AI Access | [link.datarelay.run](https://link.datarelay.run/) |
 | **DataRelay Control** | Enterprise data collection, route processing, governance, protection, and multi-destination delivery | [control.datarelay.run](https://control.datarelay.run/) |
+| **DataRelay Grant** | Coming-soon human approval and execution-control layer based on US 12,056,667 B1 and KR 10-2567118 B1 | [datarelay-grant-docs](https://github.com/datarelay-labs/datarelay-grant-docs) |
 
 ## Product boundaries
 
@@ -48,6 +63,14 @@ This is a **product family, not one bundled runtime**. The portal helps users di
 
   <Accordion title="DataRelay Control is not a manager for Link">
     Control manages enterprise data flows. It is not currently a centralized registration, heartbeat, policy-delivery, or state-synchronization controller for Link.
+  </Accordion>
+
+  <Accordion title="DataRelay Grant is an approval layer, not the execution runtime">
+    Grant is intended to decide whether a requested action may proceed after explicit human approval. The actual approved action remains the responsibility of Link, Control, or the external system that performs it.
+  </Accordion>
+
+  <Accordion title="Grant integration is optional">
+    Link and Control remain independently usable products. Grant may complement them when a human approval gate is required, but neither product depends on Grant as a mandatory runtime component.
   </Accordion>
 
   <Accordion title="Future products remain independent">
