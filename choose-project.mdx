@@ -5,7 +5,7 @@ description: "Choose the right DataRelay Labs product based on the problem you n
 
 # Choose by Problem
 
-Select the problem closest to your environment. Each card opens the dedicated product site.
+Select the problem closest to your environment. Each card opens the relevant product site or current product documentation.
 
 <CardGroup cols={2}>
   <Card title="I need remote access behind NAT/firewalls" icon="arrow-right-to-bracket" href="https://link.datarelay.run/">
@@ -24,11 +24,15 @@ Select the problem closest to your environment. Each card opens the dedicated pr
     **DataRelay Control** collects data once, applies route-specific Transform, Protection, and Policy, then delivers it to one or many Destinations.
   </Card>
 
+  <Card title="I need a human approval before an automated action runs" icon="shield-check" href="https://github.com/datarelay-labs/datarelay-grant-docs">
+    **DataRelay Grant** is the coming-soon approval and execution-control layer for Request → Human Approval → Controlled Execution workflows.
+  </Card>
+
   <Card title="I am not sure which product fits" icon="circle-question" href="/projects">
-    Compare DataRelay Link and DataRelay Control by problem, data path, operating model, and product boundary.
+    Compare DataRelay Link, DataRelay Control, and DataRelay Grant by problem, operating model, and product boundary.
   </Card>
 </CardGroup>
 
 <Note>
-  DataRelay Link and DataRelay Control are independent products. Control is not a centralized manager for Link, and Link is not a network transport component inside Control.
+  DataRelay Link, DataRelay Control, and DataRelay Grant are independent products. Grant is planned as an optional approval layer that can complement Link, Control, or external systems; it is not a required runtime component of either product.
 </Note>
