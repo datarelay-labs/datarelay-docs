@@ -9,11 +9,11 @@ DataRelay Labs projects are independent, but they share a small set of practical
 
 <CardGroup cols={2}>
   <Card title="Solve field problems first" icon="wrench">
-    Start from recurring connectivity, delivery, support, and operations problems instead of adding features for their own sake.
+    Start from recurring connectivity, delivery, approval, support, and operations problems instead of adding features for their own sake.
   </Card>
 
   <Card title="Relay only what is needed" icon="filter">
-    Avoid opening entire networks or duplicating full data flows when a narrow, controlled path can solve the actual requirement.
+    Avoid opening entire networks, duplicating full data flows, or executing sensitive actions automatically when a narrow controlled path or explicit approval gate can solve the actual requirement.
   </Card>
 
   <Card title="Keep products independent" icon="boxes-stacked">
@@ -21,15 +21,17 @@ DataRelay Labs projects are independent, but they share a small set of practical
   </Card>
 
   <Card title="Make boundaries explicit" icon="shield-halved">
-    Document prerequisites, security assumptions, supported paths, limitations, failure handling, and recovery instead of hiding operational constraints.
+    Document prerequisites, security assumptions, supported paths, approval boundaries, limitations, failure handling, and recovery instead of hiding operational constraints.
   </Card>
 </CardGroup>
 
 ## Organization model
 
-`datarelay.run` is the **DataRelay Labs organization portal**. Product documentation belongs on dedicated product sites such as `link.datarelay.run` and `control.datarelay.run`.
+`datarelay.run` is the **DataRelay Labs organization portal**. Product documentation belongs on dedicated product sites or repositories such as `link.datarelay.run`, `control.datarelay.run`, and the current DataRelay Grant documentation repository.
 
 This keeps the top-level domain stable as the product family grows and lets future products join the organization without being presented as modules of an existing product.
+
+Grant also demonstrates that products can be **independent while interoperating deliberately**: Link and Control do not depend on Grant, but may call it as an approval gate when a human decision is required before execution.
 
 <Card title="DataRelay Labs on GitHub" icon="github" href="https://github.com/datarelay-labs">
   Browse source repositories and engineering work across the organization.
