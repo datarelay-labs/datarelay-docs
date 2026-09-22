@@ -27,11 +27,24 @@ DataRelay Labs projects are independent, but they share a small set of practical
 
 ## Organization model
 
-`datarelay.run` is the **DataRelay Labs organization portal**. Product documentation belongs on dedicated product sites or repositories such as `link.datarelay.run`, `control.datarelay.run`, and the current DataRelay Grant documentation repository.
+`datarelay.run` is the **DataRelay Labs organization portal**. Product documentation belongs on dedicated product sites such as `link.datarelay.run`, `control.datarelay.run`, and `grant.datarelay.run`.
 
 This keeps the top-level domain stable as the product family grows and lets future products join the organization without being presented as modules of an existing product.
 
 Grant also demonstrates that products can be **independent while interoperating deliberately**: Link and Control do not depend on Grant, but may call it as an approval gate when a human decision is required before execution.
+
+## Shared engineering lifecycle
+
+Independence at runtime does not mean every repository invents its own development process. DataRelay Labs uses a common Engineering System for repository setup, design gates, AI-assisted implementation handoff, validation selection, PR/CI review, release evidence, operations, and session continuity.
+
+<CardGroup cols={2}>
+  <Card title="Engineering System Handbook" icon="code-branch" href="https://engineering.datarelay.run/">
+    Human-readable architecture, workflow, adoption, tools, validation rhythm, and operating model.
+  </Card>
+  <Card title="Canonical Standard" icon="github" href="https://github.com/datarelay-labs/engineering-system">
+    Normative rules and machine-consumed project standards. If the handbook and canonical repository conflict, the canonical repository wins.
+  </Card>
+</CardGroup>
 
 <Card title="DataRelay Labs on GitHub" icon="github" href="https://github.com/datarelay-labs">
   Browse source repositories and engineering work across the organization.
