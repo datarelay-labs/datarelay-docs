@@ -5,9 +5,9 @@ description: "Browse current DataRelay Labs products and their dedicated documen
 
 # Projects
 
-DataRelay Labs products share a practical relay philosophy, but each product is independent and solves a different class of problem.
+DataRelay Labs products share a practical relay and control philosophy, but each product is independent and solves a different class of problem.
 
-<CardGroup cols={2}>
+<CardGroup cols={3}>
   <Card title="DataRelay Link" icon="link" href="https://link.datarelay.run/">
     **Secure connectivity for private, isolated, and restricted networks.**
 
@@ -19,22 +19,28 @@ DataRelay Labs products share a practical relay philosophy, but each product is 
 
     Use Control when the problem is application data movement: collect once, process per Route, protect where needed, and deliver to one or many Destinations.
   </Card>
+
+  <Card title="DataRelay Grant" icon="shield-check" href="https://github.com/datarelay-labs/datarelay-grant-docs">
+    **Human approval before automated execution.**
+
+    Use Grant when an operation should not proceed until an explicit human decision has been recorded. The product is currently Coming Soon and is based on US 12,056,667 B1 and KR 10-2567118 B1.
+  </Card>
 </CardGroup>
 
 ## Product comparison
 
-| | DataRelay Link | DataRelay Control |
-| --- | --- | --- |
-| Primary problem | Controlled network / AI connectivity | Enterprise data integration and delivery |
-| What moves | Connections and authorized operations | Application data / events |
-| Typical flow | Outside → Remote Service; Managed Host → approved Internet; AI Identity → approved target permissions | Source → Stream → Routes → Destinations |
-| Main control | Which source, destination, service, identity, and permission may connect | Which records/fields go where and how they are processed |
-| Typical scale | Approximately 1–50 Managed Hosts | Enterprise data-flow pipelines |
-| Product dependency | None | None |
+| | DataRelay Link | DataRelay Control | DataRelay Grant |
+| --- | --- | --- | --- |
+| Primary problem | Controlled network / AI connectivity | Enterprise data integration and delivery | Human approval and execution gating |
+| What moves | Connections and authorized operations | Application data / events | Approval requests, decisions, and controlled execution signals |
+| Typical flow | Outside → Remote Service; Managed Host → approved Internet; AI Identity → approved target permissions | Source → Stream → Routes → Destinations | Request → Human Approval → Controlled Execution |
+| Main control | Which source, destination, service, identity, and permission may connect | Which records/fields go where and how they are processed | Whether a requested action may proceed after an explicit human decision |
+| Typical integration | Network and AI access paths | Enterprise data-flow pipelines | Link, Control, or external systems that need approval gates |
+| Product dependency | None | None | None; planned as an optional shared approval layer |
 
-## Dedicated product sites
+## Dedicated product sites and repositories
 
-<CardGroup cols={2}>
+<CardGroup cols={3}>
   <Card title="Open DataRelay Link" icon="arrow-up-right-from-square" href="https://link.datarelay.run/">
     Managed Hosts, Remote Services, Objects/Groups, Remote/Internet/AI Access, ConfigurationBundle, deployment, operations, security, and release status.
   </Card>
@@ -42,8 +48,12 @@ DataRelay Labs products share a practical relay philosophy, but each product is 
   <Card title="Open DataRelay Control" icon="arrow-up-right-from-square" href="https://control.datarelay.run/">
     Connectors, Streams, Routes, Destinations, processing, governance, administration, and operations.
   </Card>
+
+  <Card title="Open DataRelay Grant" icon="arrow-up-right-from-square" href="https://github.com/datarelay-labs/datarelay-grant-docs">
+    Coming-soon product definition, patent foundation, approval workflow, and planned integration role.
+  </Card>
 </CardGroup>
 
 <Tip>
-  New products can be added to DataRelay Labs without changing this model: `datarelay.run` remains the organization portal, while each product keeps its own dedicated site and lifecycle.
+  New products can be added to DataRelay Labs without changing this model: `datarelay.run` remains the organization portal, while each product keeps its own product boundary, lifecycle, and documentation.
 </Tip>
