@@ -14,6 +14,7 @@ flowchart TD
     L[DataRelay Link\nSecure connectivity]
     C[DataRelay Control\nEnterprise data control]
     G[DataRelay Grant\nHuman approval layer]
+    E[Engineering System\nShared engineering lifecycle]
 
     RA[Remote Access\nOutside → approved internal Remote Service]
     IA[Internet Access\nManaged source → approved Internet destination]
@@ -30,6 +31,7 @@ flowchart TD
     P --> L
     P --> C
     P --> G
+    P --> E
 
     L --> RA
     L --> IA
@@ -40,6 +42,10 @@ flowchart TD
     G -. optional approval gate .-> L
     G -. optional approval gate .-> C
     G -. API integration .-> EXT[External systems]
+
+    E -. engineering lifecycle .-> L
+    E -. engineering lifecycle .-> C
+    E -. engineering lifecycle .-> G
 ```
 
 This is a **product family, not one bundled runtime**. The portal helps users discover products; it does not imply a mandatory runtime dependency between them.
@@ -52,7 +58,15 @@ DataRelay Grant is different from Link and Control in one important way: it is p
 | --- | --- | --- |
 | **DataRelay Link** | Secure connectivity for isolated/restricted networks through Remote Access, Internet Access, and AI Access | [link.datarelay.run](https://link.datarelay.run/) |
 | **DataRelay Control** | Enterprise data collection, route processing, governance, protection, and multi-destination delivery | [control.datarelay.run](https://control.datarelay.run/) |
-| **DataRelay Grant** | Coming-soon human approval and execution-control layer based on US 12,056,667 B1 and KR 10-2567118 B1 | [datarelay-grant-docs](https://github.com/datarelay-labs/datarelay-grant-docs) |
+| **DataRelay Grant** | Coming-soon human approval and execution-control layer based on US 12,056,667 B1 and KR 10-2567118 B1 | [grant.datarelay.run](https://grant.datarelay.run/) |
+
+## Shared engineering foundation
+
+<Card title="Data Relay Engineering System" icon="code-branch" href="https://engineering.datarelay.run/">
+  The products remain runtime-independent, while the Engineering System provides the shared lifecycle for design, implementation handoff, deterministic testing, PR/CI verification, release evidence, operations, and session continuity. The handbook is human-readable; the canonical standard lives in [datarelay-labs/engineering-system](https://github.com/datarelay-labs/engineering-system).
+</Card>
+
+The Engineering System is **not another product runtime** and does not create a runtime dependency between Link, Control, and Grant.
 
 ## Product boundaries
 
