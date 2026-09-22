@@ -14,6 +14,7 @@ flowchart TD
     L[DataRelay Link\nSecure Connectivity]
     C[DataRelay Control\nEnterprise Data Control]
     G[DataRelay Grant\nHuman Approval Layer]
+    E[Engineering System\n공통 Engineering Lifecycle]
 
     RA[Remote Access\n외부 → 승인된 내부 Remote Service]
     IA[Internet Access\nManaged Source → 승인된 Internet Destination]
@@ -30,6 +31,7 @@ flowchart TD
     P --> L
     P --> C
     P --> G
+    P --> E
 
     L --> RA
     L --> IA
@@ -40,6 +42,10 @@ flowchart TD
     G -. 선택적 승인 Gate .-> L
     G -. 선택적 승인 Gate .-> C
     G -. API 연동 .-> EXT[외부 시스템]
+
+    E -. Engineering Lifecycle .-> L
+    E -. Engineering Lifecycle .-> C
+    E -. Engineering Lifecycle .-> G
 ```
 
 이 구조는 **하나의 통합 Runtime이 아니라 독립 제품들의 Family**입니다. `datarelay.run`은 제품을 찾기 위한 Portal이며 제품 간 필수 Runtime 의존성을 의미하지 않습니다.
@@ -52,7 +58,15 @@ DataRelay Grant는 Link와 Control과 다른 역할을 가집니다. Grant는 **
 | --- | --- | --- |
 | **DataRelay Link** | 폐쇄망/제한망을 위한 Remote Access, Internet Access, AI Access 기반 Secure Connectivity | [link.datarelay.run](https://link.datarelay.run/) |
 | **DataRelay Control** | Enterprise Data 수집, Route Processing, Governance, Protection, Multi-Destination Delivery | [control.datarelay.run](https://control.datarelay.run/) |
-| **DataRelay Grant** | US 12,056,667 B1 및 KR 10-2567118 B1 기반의 Coming Soon Human Approval / Execution Control Layer | [datarelay-grant-docs](https://github.com/datarelay-labs/datarelay-grant-docs) |
+| **DataRelay Grant** | US 12,056,667 B1 및 KR 10-2567118 B1 기반의 Coming Soon Human Approval / Execution Control Layer | [grant.datarelay.run](https://grant.datarelay.run/) |
+
+## 공통 Engineering Foundation
+
+<Card title="Data Relay Engineering System" icon="code-branch" href="https://engineering.datarelay.run/ko">
+  각 제품 Runtime은 독립적으로 유지하면서, Engineering System이 설계, 구현 Handoff, deterministic test, PR/CI 검증, Release Evidence, 운영, Session Continuity의 공통 Lifecycle을 제공합니다. 사람용 Handbook은 engineering.datarelay.run에서 제공하고 canonical 표준은 [datarelay-labs/engineering-system](https://github.com/datarelay-labs/engineering-system)에 있습니다.
+</Card>
+
+Engineering System은 **별도의 제품 Runtime이 아니며**, Link, Control, Grant 사이에 Runtime 의존성을 만들지 않습니다.
 
 ## 제품 경계
 
