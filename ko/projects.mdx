@@ -5,9 +5,9 @@ description: "현재 DataRelay Labs 제품과 전용 문서 사이트를 확인�
 
 # 프로젝트 소개
 
-DataRelay Labs의 제품들은 공통적인 Relay 철학을 공유하지만, 서로 독립적이며 해결하는 문제도 다릅니다.
+DataRelay Labs의 제품들은 공통적인 Relay 및 Control 철학을 공유하지만, 서로 독립적이며 해결하는 문제도 다릅니다.
 
-<CardGroup cols={2}>
+<CardGroup cols={3}>
   <Card title="DataRelay Link" icon="link" href="https://link.datarelay.run/">
     **사설망·폐쇄망·제한망을 위한 Secure Connectivity 제품입니다.**
 
@@ -19,22 +19,28 @@ DataRelay Labs의 제품들은 공통적인 Relay 철학을 공유하지만, 서
 
     Application Data Movement가 문제일 때 사용합니다. 데이터를 한 번 수집하고 Route별로 처리·보호한 뒤 하나 이상의 Destination으로 전달합니다.
   </Card>
+
+  <Card title="DataRelay Grant" icon="shield-check" href="https://github.com/datarelay-labs/datarelay-grant-docs">
+    **자동 실행 전에 사람의 승인을 두기 위한 제품입니다.**
+
+    중요한 작업이 명시적인 사람의 결정 없이 실행되어서는 안 되는 경우 사용합니다. 현재 Coming Soon 단계이며 US 12,056,667 B1 및 KR 10-2567118 B1 특허를 기반으로 제품을 정의하고 있습니다.
+  </Card>
 </CardGroup>
 
 ## 제품 비교
 
-| | DataRelay Link | DataRelay Control |
-| --- | --- | --- |
-| 주요 문제 | Network / AI Connectivity 제어 | Enterprise Data Integration / Delivery |
-| 이동 대상 | Connection 및 승인된 AI Operation | Application Data / Event |
-| 대표 흐름 | 외부 → Remote Service, Managed Host → 승인된 Internet Destination, AI Identity → 승인된 Target/Permission | Source → Stream → Routes → Destinations |
-| 핵심 제어 | 어떤 Source/Destination/Service/Identity/Permission이 연결 가능한가 | 어떤 Record/Field를 어디로 어떤 형태로 전달하는가 |
-| 대표 규모 | 약 1–50 Managed Hosts | Enterprise Data Flow Pipeline |
-| 제품 의존성 | 없음 | 없음 |
+| | DataRelay Link | DataRelay Control | DataRelay Grant |
+| --- | --- | --- | --- |
+| 주요 문제 | Network / AI Connectivity 제어 | Enterprise Data Integration / Delivery | Human Approval / Execution Gating |
+| 이동 대상 | Connection 및 승인된 AI Operation | Application Data / Event | 승인 요청, 승인 결정, 통제된 실행 신호 |
+| 대표 흐름 | 외부 → Remote Service, Managed Host → 승인된 Internet Destination, AI Identity → 승인된 Target/Permission | Source → Stream → Routes → Destinations | 요청 → 사람의 승인 → 통제된 실행 |
+| 핵심 제어 | 어떤 Source/Destination/Service/Identity/Permission이 연결 가능한가 | 어떤 Record/Field를 어디로 어떤 형태로 전달하는가 | 요청된 작업이 사람의 명시적 승인 후 실행 가능한가 |
+| 대표 연동 | Network 및 AI Access 경로 | Enterprise Data Flow Pipeline | 승인 Gate가 필요한 Link, Control 또는 외부 시스템 |
+| 제품 의존성 | 없음 | 없음 | 없음. 선택적인 공통 승인 계층으로 연동 예정 |
 
-## 전용 제품 사이트
+## 전용 제품 사이트 및 Repository
 
-<CardGroup cols={2}>
+<CardGroup cols={3}>
   <Card title="DataRelay Link 문서" icon="arrow-up-right-from-square" href="https://link.datarelay.run/">
     Managed Host, Remote Service, Object/Group, Remote/Internet/AI Access, ConfigurationBundle, 배포, 운영, 보안, Release Status를 확인합니다.
   </Card>
@@ -42,8 +48,12 @@ DataRelay Labs의 제품들은 공통적인 Relay 철학을 공유하지만, 서
   <Card title="DataRelay Control 문서" icon="arrow-up-right-from-square" href="https://control.datarelay.run/">
     Connector, Stream, Route, Destination, Processing, Governance, Administration, Operations를 확인합니다.
   </Card>
+
+  <Card title="DataRelay Grant 문서" icon="arrow-up-right-from-square" href="https://github.com/datarelay-labs/datarelay-grant-docs">
+    Coming Soon 제품 정의, 특허 기반 기술, 승인 Workflow, 향후 연동 역할을 확인합니다.
+  </Card>
 </CardGroup>
 
 <Tip>
-  앞으로 새로운 제품이 추가되어도 `datarelay.run`은 조직 포털로 유지하고, 각 제품은 자신의 전용 사이트와 Release Lifecycle을 독립적으로 유지하는 구조를 권장합니다.
+  앞으로 새로운 제품이 추가되어도 `datarelay.run`은 조직 포털로 유지하고, 각 제품은 자신의 Product Boundary, Release Lifecycle, Documentation을 독립적으로 유지합니다.
 </Tip>
