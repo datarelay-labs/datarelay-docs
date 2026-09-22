@@ -27,11 +27,24 @@ DataRelay Labs 제품들은 서로 독립적이지만, 몇 가지 실용적인 �
 
 ## 조직 구조
 
-`datarelay.run`은 **DataRelay Labs 조직 포털**입니다. 제품 문서는 `link.datarelay.run`, `control.datarelay.run`, 현재의 DataRelay Grant 문서 Repository처럼 각 제품 전용 위치에서 관리합니다.
+`datarelay.run`은 **DataRelay Labs 조직 포털**입니다. 제품 문서는 `link.datarelay.run`, `control.datarelay.run`, `grant.datarelay.run`처럼 각 제품 전용 사이트에서 관리합니다.
 
 이 구조를 유지하면 제품 수가 늘어나도 최상위 도메인의 역할은 바뀌지 않고, 새 제품을 기존 제품의 Module처럼 보이게 만들지 않으면서 자연스럽게 추가할 수 있습니다.
 
 Grant는 **제품의 독립성과 의도적인 상호 연동을 동시에 유지할 수 있다는 예시**이기도 합니다. Link와 Control은 Grant 없이 독립적으로 사용할 수 있지만, 실행 전에 사람의 승인이 필요한 경우 Grant를 선택적인 Approval Gate로 호출할 수 있습니다.
+
+## 공통 Engineering Lifecycle
+
+Runtime 독립성이 각 Repository가 서로 다른 개발 방식을 사용한다는 의미는 아닙니다. DataRelay Labs는 Repository 초기화, Design Gate, AI 기반 구현 Handoff, Validation 선택, PR/CI Review, Release Evidence, 운영, Session Continuity에 공통 Engineering System을 사용합니다.
+
+<CardGroup cols={2}>
+  <Card title="Engineering System Handbook" icon="code-branch" href="https://engineering.datarelay.run/ko">
+    사람이 이해하고 적용할 수 있도록 Architecture, Workflow, Adoption, Tool, Validation Rhythm, 운영 방식을 설명합니다.
+  </Card>
+  <Card title="Canonical Standard" icon="github" href="https://github.com/datarelay-labs/engineering-system">
+    Repository와 AI Agent가 실제로 따르는 normative rule과 machine-consumed standard입니다. Handbook과 충돌할 경우 canonical Repository가 우선합니다.
+  </Card>
+</CardGroup>
 
 <Card title="GitHub — DataRelay Labs" icon="github" href="https://github.com/datarelay-labs">
   DataRelay Labs의 Source Repository와 Engineering Project를 확인합니다.
