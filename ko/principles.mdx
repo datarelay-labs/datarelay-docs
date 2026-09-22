@@ -9,11 +9,11 @@ DataRelay Labs 제품들은 서로 독립적이지만, 몇 가지 실용적인 �
 
 <CardGroup cols={2}>
   <Card title="현장 문제부터 해결" icon="wrench">
-    기능 수를 늘리기보다 실제 연결, 데이터 전달, 지원, 운영에서 반복되는 문제를 출발점으로 합니다.
+    기능 수를 늘리기보다 실제 연결, 데이터 전달, 승인, 지원, 운영에서 반복되는 문제를 출발점으로 합니다.
   </Card>
 
   <Card title="필요한 것만 Relay" icon="filter">
-    좁고 통제된 경로로 요구사항을 해결할 수 있다면 전체 네트워크를 열거나 전체 데이터를 중복 전달하지 않습니다.
+    좁고 통제된 경로나 명시적인 승인 Gate로 요구사항을 해결할 수 있다면 전체 네트워크를 열거나, 전체 데이터를 중복 전달하거나, 중요한 작업을 무조건 자동 실행하지 않습니다.
   </Card>
 
   <Card title="제품은 독립적으로" icon="boxes-stacked">
@@ -21,15 +21,17 @@ DataRelay Labs 제품들은 서로 독립적이지만, 몇 가지 실용적인 �
   </Card>
 
   <Card title="운영 경계를 명확하게" icon="shield-halved">
-    Prerequisite, 보안 가정, 지원 경로, 제한 사항, 실패 처리, Recovery를 문서에 명확히 설명합니다.
+    Prerequisite, 보안 가정, 지원 경로, 승인 경계, 제한 사항, 실패 처리, Recovery를 문서에 명확히 설명합니다.
   </Card>
 </CardGroup>
 
 ## 조직 구조
 
-`datarelay.run`은 **DataRelay Labs 조직 포털**입니다. 제품 문서는 `link.datarelay.run`, `control.datarelay.run`처럼 각 제품 전용 사이트에서 관리합니다.
+`datarelay.run`은 **DataRelay Labs 조직 포털**입니다. 제품 문서는 `link.datarelay.run`, `control.datarelay.run`, 현재의 DataRelay Grant 문서 Repository처럼 각 제품 전용 위치에서 관리합니다.
 
 이 구조를 유지하면 제품 수가 늘어나도 최상위 도메인의 역할은 바뀌지 않고, 새 제품을 기존 제품의 Module처럼 보이게 만들지 않으면서 자연스럽게 추가할 수 있습니다.
+
+Grant는 **제품의 독립성과 의도적인 상호 연동을 동시에 유지할 수 있다는 예시**이기도 합니다. Link와 Control은 Grant 없이 독립적으로 사용할 수 있지만, 실행 전에 사람의 승인이 필요한 경우 Grant를 선택적인 Approval Gate로 호출할 수 있습니다.
 
 <Card title="GitHub — DataRelay Labs" icon="github" href="https://github.com/datarelay-labs">
   DataRelay Labs의 Source Repository와 Engineering Project를 확인합니다.
