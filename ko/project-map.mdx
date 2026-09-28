@@ -48,9 +48,9 @@ flowchart TD
     E -. Engineering Lifecycle .-> G
 ```
 
-이 구조는 **하나의 통합 Runtime이 아니라 독립 제품들의 Family**입니다. `datarelay.run`은 제품을 찾기 위한 Portal이며 제품 간 필수 Runtime 의존성을 의미하지 않습니다.
+이 구조는 **하나로 묶인 플랫폼이 아니라 독립 제품들의 모음**입니다. `datarelay.run`은 필요한 제품을 찾기 위한 포털이며, 한 제품을 사용하기 위해 다른 제품을 설치할 필요는 없습니다.
 
-DataRelay Grant는 Link와 Control과 다른 역할을 가집니다. Grant는 **선택적으로 사용할 수 있는 공통 승인 계층**을 목표로 하며, Link·Control 또는 외부 시스템의 작업이 실행되기 전에 사람의 결정을 요구할 때 호출될 수 있습니다. 실제 실행 책임과 Runtime은 각 제품 또는 외부 시스템에 그대로 남습니다.
+DataRelay Grant는 Link와 Control과 역할이 다릅니다. Grant는 **선택적으로 사용할 수 있는 공통 승인 단계**를 제공하며, Link·Control 또는 외부 시스템의 작업이 실행되기 전에 사람의 결정이 필요할 때 사용할 수 있습니다. 승인된 작업의 실제 실행은 요청한 제품이나 외부 시스템이 담당합니다.
 
 ## 현재 프로젝트 디렉터리
 
@@ -60,27 +60,27 @@ DataRelay Grant는 Link와 Control과 다른 역할을 가집니다. Grant는 **
 | **DataRelay Control** | Enterprise Data 수집, Route Processing, Governance, Protection, Multi-Destination Delivery | [control.datarelay.run](https://control.datarelay.run/) |
 | **DataRelay Grant** | US 12,056,667 B1 및 KR 10-2567118 B1 기반의 Coming Soon Human Approval / Execution Control Layer | [grant.datarelay.run](https://grant.datarelay.run/) |
 
-## 공통 Engineering Foundation
+## 공통 엔지니어링 기반
 
 <Card title="Data Relay Engineering System" icon="code-branch" href="https://engineering.datarelay.run/ko">
-  각 제품 Runtime은 독립적으로 유지하면서, Engineering System이 설계, 구현 Handoff, deterministic test, PR/CI 검증, Release Evidence, 운영, Session Continuity의 공통 Lifecycle을 제공합니다. 사람용 Handbook은 engineering.datarelay.run에서 제공하고 canonical 표준은 [datarelay-labs/engineering-system](https://github.com/datarelay-labs/engineering-system)에 있습니다.
+  각 제품은 독립적으로 실행되지만 Engineering System을 통해 설계, 구현 전달, 테스트, PR/CI 검증, 릴리스, 운영, 작업 이어가기 절차를 공유합니다. 사람이 읽는 설명서는 engineering.datarelay.run에서 제공하고 실제 규칙은 [datarelay-labs/engineering-system](https://github.com/datarelay-labs/engineering-system)에 있습니다.
 </Card>
 
-Engineering System은 **별도의 제품 Runtime이 아니며**, Link, Control, Grant 사이에 Runtime 의존성을 만들지 않습니다.
+Engineering System은 **별도의 제품이 아니며**, Link, Control, Grant 사이에 실행 의존성을 만들지 않습니다.
 
 ## 제품 경계
 
 <AccordionGroup>
   <Accordion title="DataRelay Link는 DataRelay Control이 아닙니다">
-    Link는 무엇이 연결될 수 있는지를 제어합니다. Control의 Stream/Route/Destination Data Processing 모델을 제공하는 제품이 아닙니다.
+    Link는 무엇이 연결될 수 있는지를 제어합니다. Control의 Stream/Route/Destination 데이터 처리 기능을 제공하는 제품은 아닙니다.
   </Accordion>
 
   <Accordion title="DataRelay Control은 Link의 중앙 관리 제품이 아닙니다">
-    Control은 Enterprise Data Flow를 관리합니다. 현재 Link의 Registration, Heartbeat, Policy Delivery, State Synchronization을 담당하는 중앙 Controller가 아닙니다.
+    Control은 기업 데이터 흐름을 관리합니다. 현재 Link의 등록, Heartbeat, 정책 전달, 상태 동기화를 담당하는 중앙 관리 제품은 아닙니다.
   </Accordion>
 
   <Accordion title="DataRelay Grant는 실행 Runtime이 아니라 승인 계층입니다">
-    Grant는 사람의 명시적 승인 후 요청된 작업이 진행 가능한지를 결정하는 역할을 목표로 합니다. 실제 승인된 작업의 실행은 Link, Control 또는 해당 외부 시스템이 담당합니다.
+    Grant는 사람의 명시적인 승인 후 요청된 작업을 진행해도 되는지 결정하는 역할을 합니다. 승인된 작업의 실제 실행은 Link, Control 또는 해당 외부 시스템이 담당합니다.
   </Accordion>
 
   <Accordion title="Grant 연동은 선택 사항입니다">
