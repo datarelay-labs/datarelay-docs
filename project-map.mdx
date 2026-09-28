@@ -1,6 +1,6 @@
 ---
 title: "Project Relationships & Directory"
-description: "See how DataRelay Labs projects relate and where each product boundary begins and ends."
+description: "See how DataRelay Labs products relate and what each one is responsible for."
 ---
 
 # Project Relationships & Directory
@@ -48,9 +48,9 @@ flowchart TD
     E -. engineering lifecycle .-> G
 ```
 
-This is a **product family, not one bundled runtime**. The portal helps users discover products; it does not imply a mandatory runtime dependency between them.
+This is a **family of independent products, not one bundled platform**. The portal helps users find the right product; using one product does not require the others.
 
-DataRelay Grant is different from Link and Control in one important way: it is planned as an **optional shared approval layer**. A Link, Control, or external-system action may call Grant when a human decision is required before execution, while each product still keeps its own runtime and responsibility.
+DataRelay Grant has a different role from Link and Control: it provides an **optional shared approval step**. Link, Control, or an external system can call Grant when an action needs a human decision before execution, while the system that requested the action remains responsible for carrying it out.
 
 ## Current project directory
 
@@ -63,7 +63,7 @@ DataRelay Grant is different from Link and Control in one important way: it is p
 ## Shared engineering foundation
 
 <Card title="Data Relay Engineering System" icon="code-branch" href="https://engineering.datarelay.run/">
-  The products remain runtime-independent, while the Engineering System provides the shared lifecycle for design, implementation handoff, deterministic testing, PR/CI verification, release evidence, operations, and session continuity. The handbook is human-readable; the canonical standard lives in [datarelay-labs/engineering-system](https://github.com/datarelay-labs/engineering-system).
+  The products run independently, while the Engineering System provides one shared process for design, implementation handoff, testing, PR/CI verification, releases, operations, and continuing work across sessions. This site explains that process; the rules themselves live in [datarelay-labs/engineering-system](https://github.com/datarelay-labs/engineering-system).
 </Card>
 
 The Engineering System is **not another product runtime** and does not create a runtime dependency between Link, Control, and Grant.

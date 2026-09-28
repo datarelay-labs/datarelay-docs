@@ -5,7 +5,7 @@ description: "Shared design principles across DataRelay Labs projects."
 
 # Design Philosophy
 
-DataRelay Labs projects are independent, but they share a small set of practical engineering principles.
+DataRelay Labs projects are independent, but they follow a small set of shared engineering principles.
 
 <CardGroup cols={2}>
   <Card title="Solve field problems first" icon="wrench">
@@ -31,18 +31,18 @@ DataRelay Labs projects are independent, but they share a small set of practical
 
 This keeps the top-level domain stable as the product family grows and lets future products join the organization without being presented as modules of an existing product.
 
-Grant also demonstrates that products can be **independent while interoperating deliberately**: Link and Control do not depend on Grant, but may call it as an approval gate when a human decision is required before execution.
+Grant also shows how independent products can work together: Link and Control do not depend on Grant, but can use it when an action needs human approval before execution.
 
 ## Shared engineering lifecycle
 
-Independence at runtime does not mean every repository invents its own development process. DataRelay Labs uses a common Engineering System for repository setup, design gates, AI-assisted implementation handoff, validation selection, PR/CI review, release evidence, operations, and session continuity.
+Independent products do not need separate engineering processes. DataRelay Labs uses one Engineering System for repository setup, design review, AI-assisted implementation handoff, validation, PR/CI review, releases, operations, and continuing work across sessions.
 
 <CardGroup cols={2}>
   <Card title="Engineering System Handbook" icon="code-branch" href="https://engineering.datarelay.run/">
-    Human-readable architecture, workflow, adoption, tools, validation rhythm, and operating model.
+    Practical guidance for architecture, workflows, adoption, tools, validation, and day-to-day use.
   </Card>
   <Card title="Canonical Standard" icon="github" href="https://github.com/datarelay-labs/engineering-system">
-    Normative rules and machine-consumed project standards. If the handbook and canonical repository conflict, the canonical repository wins.
+    The rules and project standards used by repositories and AI agents. If this handbook differs from the Engineering System repository, follow the repository.
   </Card>
 </CardGroup>
 
