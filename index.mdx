@@ -5,9 +5,9 @@ description: "Central portal for DataRelay Labs projects and product documentati
 
 # DataRelay Labs
 
-**Source-available products for secure connectivity, controlled data movement, enterprise data delivery, and approval-gated automation.**
+**Source-available products for secure connectivity, controlled data movement, enterprise data delivery, and human-approved automation.**
 
-DataRelay Labs is the common home for independent products that solve practical connectivity, data-delivery, and execution-governance problems. Each product keeps its own runtime, documentation, release lifecycle, and operational boundary.
+DataRelay Labs brings together independent products for secure connectivity, data delivery, and approval-controlled automation. Each product has its own runtime, documentation, releases, and clearly defined responsibility.
 
 <Note>
   Start with the problem you need to solve. DataRelay Link, DataRelay Control, and DataRelay Grant are separate products. Grant can complement the other products as an approval layer, but none is required to use another.
@@ -23,13 +23,13 @@ DataRelay Labs is the common home for independent products that solve practical 
     Browse current DataRelay Labs products and jump to their dedicated documentation or product repositories.
   </Card>
   <Card title="Project relationships & directory" icon="diagram-project" href="/project-map">
-    See how the current products differ, where each product boundary begins and ends, and where Grant can provide a shared approval layer.
+    See how the products differ, what each one is responsible for, and where Grant can add a shared approval step.
   </Card>
   <Card title="Design philosophy" icon="book-open" href="/principles">
     Review the shared principles behind DataRelay Labs projects and how future projects fit into the organization.
   </Card>
   <Card title="Engineering System" icon="code-branch" href="https://engineering.datarelay.run/">
-    See the shared engineering lifecycle used to design, implement, validate, release, operate, and continue work across DataRelay Labs repositories.
+    See the shared engineering process used across DataRelay Labs repositories, from design and implementation through validation, release, and operations.
   </Card>
 </CardGroup>
 
@@ -40,10 +40,10 @@ DataRelay Labs is the common home for independent products that solve practical 
     Lightweight secure connectivity for isolated and restricted networks: Remote Access to approved internal Remote Services, Internet Access to approved external destinations, and AI Access for authenticated AI identities with explicit permissions.
   </Card>
   <Card title="DataRelay Control" icon="sliders" href="https://control.datarelay.run/">
-    Enterprise Data Control Gateway using a **One Stream → Many Routes → Many Destinations** model for collection, route-specific processing, governance, protection, and delivery.
+    Enterprise data control using a **One Stream → Many Routes → Many Destinations** model for collection, route-specific processing, governance, protection, and delivery.
   </Card>
   <Card title="DataRelay Grant" icon="shield-check" href="https://grant.datarelay.run/">
-    Coming-soon approval and execution-control layer based on **US 12,056,667 B1** and **KR 10-2567118 B1**. It is designed to place an explicit human decision between a requested action and its execution.
+    Coming-soon approval product based on **US 12,056,667 B1** and **KR 10-2567118 B1**. It places an explicit human decision between a requested action and its execution.
   </Card>
 </CardGroup>
 
@@ -53,15 +53,15 @@ DataRelay Labs is the common home for independent products that solve practical 
 
 ## Shared engineering foundation
 
-The product runtimes are independent, but their engineering lifecycle follows a common foundation.
+The products run independently, but they follow the same engineering process.
 
 <CardGroup cols={2}>
   <Card title="Engineering System Handbook" icon="code-branch" href="https://engineering.datarelay.run/">
-    Human-readable guidance for the DataRelay Labs workflow: design and planning, bounded implementation, deterministic validation, PR/CI verification, release evidence, operations, and session continuity.
+    Practical guidance for design and planning, focused implementation, validation, PR/CI checks, releases, operations, and continuing work across sessions.
   </Card>
   <Card title="Canonical Engineering Standard" icon="github" href="https://github.com/datarelay-labs/engineering-system">
-    Machine-consumed standards, repository rules, templates, adapters, validation contracts, and lifecycle governance used by AI agents and project repositories.
+    The repository rules, templates, adapters, and validation standards used by AI agents and DataRelay Labs projects.
   </Card>
 </CardGroup>
 
-The handbook explains the workflow for humans; the canonical `datarelay-labs/engineering-system` repository remains the normative engineering standard.
+The handbook explains how to use the system. The `datarelay-labs/engineering-system` repository contains the rules that projects and AI agents actually follow.
