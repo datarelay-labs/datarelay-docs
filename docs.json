@@ -34,12 +34,7 @@
         "type": "github",
         "href": "https://github.com/datarelay-labs"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Browse Projects",
-      "href": "/projects"
-    }
+    ]
   },
   "search": {
     "prompt": "Search DataRelay Labs..."
