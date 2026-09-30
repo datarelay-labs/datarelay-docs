@@ -4,17 +4,35 @@
   "name": "DataRelay Labs",
   "description": "A central portal for DataRelay Labs products, product documentation, and practical source-available engineering.",
   "colors": {
-    "primary": "#16A34A"
+    "primary": "#C2410C",
+    "light": "#FB923C",
+    "dark": "#C75A00"
   },
   "navbar": {
     "links": [
       {
-        "type": "github",
-        "href": "https://github.com/datarelay-labs"
+        "label": "DataRelay",
+        "href": "https://datarelay.run/"
       },
       {
-        "label": "Engineering System",
+        "label": "Link",
+        "href": "https://link.datarelay.run/"
+      },
+      {
+        "label": "Control",
+        "href": "https://control.datarelay.run/"
+      },
+      {
+        "label": "Grant",
+        "href": "https://grant.datarelay.run/"
+      },
+      {
+        "label": "Engineering",
         "href": "https://engineering.datarelay.run/"
+      },
+      {
+        "type": "github",
+        "href": "https://github.com/datarelay-labs"
       }
     ],
     "primary": {
@@ -76,5 +94,9 @@
     "dark": "/logo/dark.svg",
     "href": "https://datarelay.run"
   },
-  "favicon": "/favicon.svg"
+  "favicon": "/favicon.svg",
+  "appearance": {
+    "default": "system",
+    "strict": false
+  }
 }
